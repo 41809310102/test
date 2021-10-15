@@ -1,0 +1,47 @@
+/* page{
+  background: #48ccce;
+} */
+.srcbox{
+  /* height: 200px; */
+  background-color: rgb(255, 255, 255);
+  margin: 2px;
+  flex:0 0 100px;
+  display: flex;
+  border: 3px solid #15a3a5;
+  border-radius: 5px;
+  background: #48ccce;
+}
+.srcbox .img{
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+.bottom{
+  display: flex;
+  background:rgb(255, 255, 255);
+}
+.bottom .btn{
+  border: 3px solid #5fcff1;
+  /* 透明 */
+  background-color: transparent;
+  height: 30px;
+  width: 85px;
+  font-size:14px;
+  line-height: 11px;
+  margin: 10px;
+  background: linear-gradient(to right,#edb8b0,#016db4);
+  color: #48ccce;
+}
+input{
+  background: rgb(255, 255, 255);
+  height: 25px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 3px solid #48ccce;
+}
+.fonts{
+  line-height: 23px;
+  color: white;
+  font-weight: 900;
+}

@@ -1,0 +1,71 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myface/myface",
+          "pathName": "pages/myface/myface",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pwdUd/pwdUd",
+          "pathName": "pages/pwdUd/pwdUd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/subject/subject",
+          "pathName": "pages/subject/subject",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/subjetsOpen/subjetsOpen",
+          "pathName": "pages/subjetsOpen/subjetsOpen",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/subject/subject",
+          "pathName": "pages/subject/subject",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/introduction/introduction",
+          "pathName": "pages/introduction/introduction",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

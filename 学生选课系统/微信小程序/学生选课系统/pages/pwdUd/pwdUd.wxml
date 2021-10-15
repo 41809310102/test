@@ -1,0 +1,8 @@
+<view class="top">
+<form bindsubmit='revise'>
+  <input placeholder='请输入您的学号' type="text"name="stuId"></input>
+  <input placeholder='请输入您的初始密码' type="text"name="oldpassword"></input>
+  <input placeholder='请输入您的密码'type="text"name="password"></input>
+  <button class="btn" formType="submit">修改</button>
+</form>
+</view>

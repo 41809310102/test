@@ -1,0 +1,3 @@
+<view class="top">简介</view>
+<view class="zop">{{schoolinfo}}</view>
+<view class="zop">{{schoolteacherinfo}}</view>

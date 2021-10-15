@@ -1,0 +1,9 @@
+.top{
+  font-size: 30px;
+  font-weight: 900;
+  border-bottom: 3px solid black;
+ text-align: center;
+}
+.zop{
+  font-weight: 900;
+}

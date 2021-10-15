@@ -1,0 +1,13 @@
+/* pages/pwdUd/pwdUd.wxss */
+input{
+  margin:25px 25px;
+  border: 2px solid rgb(124, 121, 121);
+  border-radius:5px;
+  height: 40px;
+}
+btn{
+  margin-top: 50px;
+  border: 2px solid rgb(124, 121, 121);
+  border-radius:5px;
+  height: 40px;
+}

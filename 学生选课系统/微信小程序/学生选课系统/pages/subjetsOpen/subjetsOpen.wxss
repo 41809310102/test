@@ -1,0 +1,89 @@
+video{
+  width: 100%;
+}
+.collect{
+  display: flex;
+  margin-left: 250px;
+  width: 65px;
+  /* border: 1px solid black; */
+}
+.collect image{
+  width:70rpx ;
+  height:50rpx ;
+  }
+.collect .fonts{
+  font-weight: 900;
+}
+.message{
+  display: flex;
+  border: 2 solid black;
+}
+.message .box{
+  width: 80%;
+}
+.message .box .biaoti{
+  /* text-align: center; */
+  font-size: 22px;
+  font-weight: 900;
+  margin-left: 15px;
+}
+.message .box .teacher{
+  /* text-align: center; */
+ color: rgb(131, 131, 131);
+ margin-left: 15px;
+}
+.message .jianjie{
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: 900;
+  color: rgb(168, 160, 160);
+}
+.setpinglun{
+  border: 2px solid rgb(121, 94, 94);
+  height: 150px !important;
+}
+.setpinglun .srcbox{
+  border: 2px solid  #15a3a5;
+  height: 50px;
+}
+.getpinglun{
+  border: 3px solid #15a3a5;
+  height: 100px ;
+}
+.pinglun{
+  height:204px;
+  background-color:rgb(255, 255, 255);
+}
+.srcout{
+  flex-wrap: nowrap;
+}
+.srcbox{
+  /* height: 200px; */
+  background: #48ccce;
+  margin: 2px;
+  flex:0 0 100px
+}
+.bottom{
+  display: flex;
+  background: #48ccce;
+}
+.bottom .btn{
+  border: 3px solid #12181a;
+  /* 透明 */
+  background-color: transparent;
+  height: 30px;
+  width: 85px;
+  font-size:14px;
+  line-height: 11px;
+  margin: 10px;
+  background: linear-gradient(to right,#50d1aa,#1574e0);
+  color: #ffffff;
+}
+input{
+  background: rgb(255, 255, 255);
+  height: 25px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 3px solid #284444;
+}

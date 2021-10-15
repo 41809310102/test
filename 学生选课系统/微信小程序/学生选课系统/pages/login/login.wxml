@@ -1,0 +1,10 @@
+<view class='container login'>
+    <form bindsubmit='login' class='input-container'>
+      <input placeholder='请输入您的学号' focus='true' value='{{ stuId }}' name="stuId" data-key='stuId'></input>
+      <input placeholder='请输入您的密码' password='true' class='input-password'name="password" value='{{ password }}' data-key='password'></input>
+    <view class='button-container'>
+      <button class='button-login' formType="submit">登陆</button>
+      <rich-text class='register-tip'>还没有账号，立即 <navigator class='register-navigator' url='../register/register'>注册</navigator></rich-text>
+    </view>
+  </form>
+</view>

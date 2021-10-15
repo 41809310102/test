@@ -1,0 +1,34 @@
+<view class="top">
+<view class="stop">
+姓名:{{stuName}}
+</view>
+<view class="stop">
+  学号:{{stuId}}
+</view>
+</view>
+<view class="middle">
+  <view class="middtop">
+    收藏课程
+  </view>
+    <view class="middrab">
+      <scroll-view class="setpinglun" scroll-y>
+        <view class="scrout">
+      <view bindtap="click" bindlongpress="hide" class="srcbox"data-id="{{index}}" wx:for="{{dataObj}}">
+                <view>
+                <image class="img" src="{{item.schoolimg}}"></image>
+                </view>
+                <view>
+                 <view class="fonts">编号:{{item.schoolid}}</view>
+                 <view class="fonts">科目名称:{{item.schoolname}}</view>
+                 <view class="fonts">教师姓名:{{item.schoolteachername}}</view>
+                </view>
+     </view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+<button class="btn" type="default"plain="true"bindtap="pwdUd" >修改密码</button>
+<button class="btn" type="default"plain="true"bindtap="exitSy" >退出登录</button>
+
+           
+             

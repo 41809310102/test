@@ -1,0 +1,18 @@
+<view class="sousuo">
+  <form bindsubmit="sousuo">
+  <view class="bottom">
+      <input type="text" name="guanjianci"value="{{infos}}"placeholder='输入关键词'></input>
+      <button class="btn" formType="submit"bindtap="resert" >搜索</button>
+    </view>
+    </form>
+</view>  
+<view bindtap="click" bindlongpress="hide" class="srcbox"data-id="{{index}}"wx:for="{{dataObj}}">
+ <view>
+   <image class="img" src="{{item.schoolimg}}"></image>
+ </view>
+ <view>
+  <view class="fonts">编号:{{item.schoolid}}</view>
+  <view class="fonts">科目名称:{{item.schoolname}}</view>
+  <view class="fonts">教师姓名:{{item.schoolteachername}}</view>
+ </view>
+ </view>

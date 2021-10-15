@@ -1,0 +1,42 @@
+<view class="page-body">
+  <view class="page-section tc">
+    <video 
+      id="myVideo" 
+      src="{{dataObj.schoolurl}}"
+      binderror="videoErrorCallback" 
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+  </view>
+</view>
+<view class="collect">
+  <view class="fonts">收藏</view>
+  <image class="image"src="{{imgurl}}"bindtap="click"></image>
+</view>
+<view class="message">
+  <view class="box">
+    <view class="biaoti">{{dataObj.schoolname}}</view>
+    <view class="teacher">{{dataObj.schoolteachername}}</view>
+  </view>
+  <view class="jianjie">
+    <navigator url='../introduction/introduction'>简介></navigator>
+  </view>
+</view>
+<view class="pinglun">
+  <scroll-view class="setpinglun" scroll-y>
+    <view class="scrout">
+    <view  class="srcbox"data-id="{{index}}" wx:for="{{pinglunObj}}"wx:key="navItems">
+     <view>{{item.username}}</view>
+     <view>{{item.info}}</view>
+     </view>
+    </view>
+  </scroll-view>
+  <form bindsubmit="updata">
+  <view class="bottom">
+      <input type="text" name="info"value="{{infos}}"></input>
+      <button class="btn" formType="submit"bindtap="resert" >提交</button>
+    </view>
+    </form>
+
+</view>
+
