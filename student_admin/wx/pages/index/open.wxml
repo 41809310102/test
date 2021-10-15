@@ -1,0 +1,1 @@
+<web-view src="http://localhost:8080/index.html?id=2#admin/open.html"></web-view>

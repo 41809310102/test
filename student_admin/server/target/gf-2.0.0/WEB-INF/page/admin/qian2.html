@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>签到信息</title>
+    #parse("sys/header.html")
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+            <div class="form-group col-sm-2">
+                <select class="form-control" v-model="q.paike">
+                    <option value="">所有课程</option>
+                    <option v-for="l in paikes" :value="l.id">{{l.courseEntity.name}} -- {{l.time}}</option>
+                </select>
+            </div>
+            <a class="btn btn-default" @click="query">查询</a>
+            <!--<a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;签到</a>-->
+            <a class="btn btn-primary" @click="info"><i class="fa fa-info"></i>&nbsp;详情</a>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-success">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2 control-label">课程</div>
+                <div class="col-sm-10">
+                    <select class="form-control" :disabled="showInfo" v-model="qian.paike">
+                        <option v-for="l in paikes" :value="l.id">{{l.courseEntity.name}} -- {{l.time}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" v-if="showInfo">
+                <div class="col-sm-2 control-label">签到时间</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" :disabled="showInfo" v-model="qian.gmttime"
+                           placeholder="签到时间"/>
+                </div>
+            </div>
+            <div class="form-group" v-if="showInfo">
+                <div class="col-sm-2 control-label">签到结果</div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" :disabled="showInfo" v-model="qian.state"
+                           placeholder="签到结果"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定" v-if="!showInfo"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${rc.contextPath}/js/admin/qian2.js?_${date.systemTime}"></script>
+</body>
+</html>
