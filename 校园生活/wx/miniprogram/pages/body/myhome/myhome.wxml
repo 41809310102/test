@@ -1,0 +1,92 @@
+
+<view class="main">
+  <view>
+    <view class="header">
+      <view class="thumb">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data class="nickname" type="userNickName"></open-data>
+      <text wx:if="{{openid=='oLRrd4tjBrKNlH7YzmFOkidms9mA'||openid=='oLRrd4pHrjiyAfRrJu_zxCJpc9js'}}" bindtap='manger' class="about">管理员</text>
+    </view>
+ 
+    
+    <view class="bottom_box">
+      <view class="bottom_card" bindtap="adddresmang" data-go="/pages/parse/parse" data-status="1" >
+            <view class="bottom_1">
+                  <image src="../../../images/parse.png"></image>
+                  <view>地址管理</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+      </view>
+      <navigator class="bottom_card" url="../xinwenfabu/dongtaifabu">
+            <view class="bottom_1">
+                  <image src="../../../images/feedback.png"></image>
+                  <view>我要表白</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+            <button open-type="feedback"></button>
+      </navigator>
+      
+      <navigator class="bottom_card" url="../shopporder/shopporder">
+            <view class="bottom_1">
+                  <image src="../../../images/parse.png"></image>
+                  <view>购物订单</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+      </navigator>
+      <navigator class="bottom_card" url="../shongcanorder/dingdan">
+            <view class="bottom_1">
+                  <image src="../../../images/parse.png"></image>
+                  <view>定餐订单</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+      </navigator>
+      <navigator class="bottom_card" url="../updownorder/dingdan" >
+            <view class="bottom_1">
+                  <image src="../../../images/kefu.png"></image>
+                  <view>打印订单</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+      </navigator>
+      <navigator class="bottom_card" url="../kuaidiorder/dingdan">
+            <view class="bottom_1">
+                  <image src="../../../images/feedback.png"></image>
+                  <view>快件订单</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+            <button open-type="feedback"></button>
+      </navigator>
+      
+     
+      <navigator class="bottom_card"url="../kefu/kefu">
+            <view class="bottom_1">
+                  <image src="../../../images/guanyu.png"></image>
+                  <view>联系客服</view>
+            </view>
+            <image src="../../../images/go.png"></image>
+      </navigator>
+</view>
+
+<!--分享弹出层-->
+<van-popup show="{{ showShare }}" bind:close="closePop">
+      <view class="share_contain">
+            <view class="share_border"></view>
+            <view class="share_title">分享到</view>
+            <view class="share_box">
+                  <view class="share_one">
+                        <image src="../../../image/weixin.png"></image>
+                        <view>微信好友</view>
+                        <button class="share_button" open-type="share"></button>
+                  </view>
+                  <view class="share_bor"></view>
+                  <view class="share_one">
+                        <image src="../../../image/pyq.png"></image>
+                        <view>朋友圈</view>
+                        <button class="share_button" bindtap="preview" data-link="{{poster}}"></button>
+                  </view>
+            </view>
+      </view>
+</van-popup>
+  
+  </view>
+</view>

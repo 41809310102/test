@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.naughty.userlogin02.dao.CheckDao">
+
+
+    <select id="getAllFlow" resultType="com.naughty.userlogin02.bean.Check">
+        SELECT * FROM check1
+        <if test="url !=null ">
+            WHERE url like #{url}
+        </if>
+        LIMIT #{pageStart},#{pageSize}
+    </select>
+
+    <select id="getFlowCounts" resultType="java.lang.Integer">
+        SELECT count(*) FROM check1
+        <if test="url !=null ">
+            WHERE url like #{url}
+        </if>
+    </select>
+
+    <select id="getUpdateFlow" resultType="com.naughty.userlogin02.bean.Check">
+        SELECT * FROM check1 WHERE id = #{id}
+    </select>
+
+    <update id="updateState">
+        UPDATE check1 SET error = #{error} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteFlow">
+        DELETE FROM check1 WHERE id = #{id}
+    </delete>
+
+</mapper>

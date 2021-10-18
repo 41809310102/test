@@ -20,7 +20,7 @@ Page({
         title: '正在登录...'
       })
       wx.request({
-        url: 'http://49.232.127.127:8080/xskc/loginServlet',
+        url: 'http://localhost:8080/jspservlet_war/loginServlet',
         data: {
           studentid:this.data.stuId,
           password:this.data.password
@@ -32,7 +32,7 @@ Page({
         method: 'POST',
         success: function (res) {
          wx.setStorageSync('username', res.data.data.username)
-         var name= wx.getStorageSync('username')
+        var name= wx.getStorageSync('username')
          console.log(name)
           console.log(res.data);
           console.log(res.data.flag)

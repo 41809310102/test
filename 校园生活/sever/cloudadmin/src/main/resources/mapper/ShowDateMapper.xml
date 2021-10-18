@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.naughty.userlogin02.dao.ShowdateDao">
+
+
+    <select id="getAlldate" resultType="com.naughty.userlogin02.bean.Showdate">
+        SELECT * FROM date1
+        <if test="name!=null ">
+            WHERE name like #{name}
+        </if>
+        LIMIT #{pageStart},#{pageSize}
+    </select>
+
+
+    <select id="getAlldate1" resultType="com.naughty.userlogin02.bean.Showdate">
+        SELECT * FROM date2
+        <if test="name!=null ">
+            WHERE name like #{name}
+        </if>
+        LIMIT #{pageStart},#{pageSize}
+    </select>
+
+    <update id="updatenew">
+        UPDATE date1 SET value = #{count} WHERE name = #{name}
+    </update>
+
+    <update id="updatenew2">
+        UPDATE date2 SET value = #{count} WHERE name = #{name}
+    </update>
+
+
+</mapper>

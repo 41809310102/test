@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/menu/shongchan/shongchan",
+    "pages/body/index/index",
+    "pages/body/first/first",
+    "pages/body/action/actiont",
+    "pages/body/video/video",
+    "pages/body/myhome/myhome",
+    "pages/menu/updown/updown",
+    "pages/menu/kuaidi/kuaidi",
+    "pages/menu/category/category",
+    "pages/menu/biaobai/biaobai",
+    "pages/menu/makefirend/makefirend",
+    "pages/menu/shongchan/detail/detail",
+    "pages/menu/shongchan/foodsumit/foodsumit",
+    "pages/menu/shongchan/address/address"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#48ccce",
+    "navigationBarTitleText": "校园范",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#177e28",
+    "backgroundColor": "#48ccce",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/body/first/first",
+        "text": "精华",
+        "iconPath": "images/first2.png",
+        "selectedIconPath": "images/first1.png"
+      },
+      {
+        "pagePath": "pages/body/action/actiont",
+        "text": "活动",
+        "iconPath": "images/action2.png",
+        "selectedIconPath": "images/action.png"
+      },
+      {
+        "pagePath": "pages/body/video/video",
+        "text": "看点",
+        "iconPath": "images/show2.png",
+        "selectedIconPath": "images/show1.png"
+      },
+      {
+        "pagePath": "pages/body/myhome/myhome",
+        "text": "我的",
+        "iconPath": "images/me2.png",
+        "selectedIconPath": "images/me.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

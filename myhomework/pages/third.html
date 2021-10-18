@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href=".././targe/third.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+</head>
+<style>
+
+    /*整体去除内外边距*/
+    * {
+        margin: 0;
+        padding:0;
+    }
+    /*取消列表的图标内容*/
+    ul{
+        list-style: none;
+    }
+    /*对整体部分的控制，浏览图片的窗口*/
+    .banner{
+        width: 1024px;
+        height: 512px;
+        border: 2px solid #ccc;
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;
+    }
+    /*图片的初步设置后面的动态内容会在js中实现*/
+    .img{
+        width:1024px;
+        height: 512px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /*让没长图片向左浮动*/
+    .img li{
+        float: left;
+    }
+    /*圆点承载部分的设计*/
+    .num{
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 0;
+    }
+    /*圆点设计*/
+    .num li{
+        width: 10px;
+        height: 10px;
+        background:rgba(0,0,0,0.5);
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    /*按钮部分初始不可见*/
+    .btn{
+        display: none;
+    }
+    /*按钮形状设计*/
+    .btn span{
+        display: block;
+        width: 50px;
+        height: 100px;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        font-size: 40px;
+        line-height: 100px;
+        text-align: center;
+        cursor:pointer;
+    }
+    /*上一个设计*/
+    .btn .prev{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -50px;
+    }
+    /*下一个设计*/
+    .btn .next{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -50px;
+    }
+    /*对按妞动态呈现的变换进行类选择器的设计为js代码部分进行铺垫*/
+    .num .active{
+        background-color: #fff;
+    }
+    .hide{
+        display: none;
+    }
+</style>
+<body>
+
+<div >
+
+</div>
+
+<!--轮播图整体div-->
+<div class="banner" >
+    <!--无序列表承载轮播的图片-->
+    <ul class="img">
+        <li><a href="#"><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.I2ScoPbjf_EhUj10sb1QwgHaEK?w=308&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="第1张图片" width="1024px" height="530px"></a></li>
+        <li><a href="#"><img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.CHtN0LnJdDStJG4XBKdrbAHaEH?w=295&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="第2张图片" width="1024px" height="530px"></a></li>
+        <li><a href="#"><img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.TUGhOTEC3sVoREImt3teLwHaEH?w=295&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="第3张图片" width="1024px" height="530px"></a></li>
+        <li><a href="#"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nkiNFURGQUj4PcfhjYsbAgHaEK?w=285&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="第4张图片" width="1024px" height="530px"></a></li>
+        <li><a href="#"><img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.hL9ow3RNT0TKue04MmLvzwHaDe?w=350&h=164&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="第5张图片" width="1024px" height="530px"></a></li>
+
+    </ul>
+    <!--用来放置圆点具体实施在js代码中呈现-->
+    <ul class="num"></ul>
+    <!--左右点击按钮-->
+    <div class="btn">
+        <span class="prev"><</span>
+        <span class="next">></span>
+    </div>
+</div>
+
+<div id="login_box" style="margin-top: -20px">
+    <h2>阳节的来历</h2>
+    <div id="form">
+        <div id="input_box">
+            <i class="fa" aria-hidden="true"></i>
+            <li>农历九月九日，是中华民族的传统节日--重阳节，又称“老人节”。因为《易经》中把“六”定为阴数，把“九”定为阳数，九月九日，日月并阳，两九相重，故而叫重阳，也叫重九。古人认为是个值得庆贺的吉利日子，并且从很早就开始过此节日。</li><br>
+            <li>　庆祝重阳节的活动多彩浪漫，一般包括出游赏景、登高远眺、观赏菊花、遍插茱萸、吃重阳糕、饮菊花酒等活动。</li><br>
+            <li>九九重阳，因为与“久久”同音，九在数字中又是最大数，有长久长寿的含意，况且秋季也是一年收获的黄金季节，重阳佳节，寓意深远，人们对此节历来有着特殊的感情，唐诗宋词中有不少贺重阳，咏菊花的诗词佳作。</li><br>
+            <li>今天的重阳节，被赋予了新的含义，在1989年，我国把每年的九月九日定为老人节，传统与现代巧妙地结合，成为尊老、敬老、爱老、助老的老年人的节日。全国各机关、团体、街道，往往都在此时组织从工作岗位上退下来的老人们秋游赏景，或临水玩乐，或登山健体，让身心都沐浴在大自然的怀抱里；不少家庭的晚辈也会搀扶着年老的长辈到郊外活动或为老人准备一些可口的饮食。</li><br>
+        </div>
+    </div>
+</div>
+
+
+<div id="login_box" style="margin-top: -20px">
+    <h2>重阳节的习俗</h2>
+    <div id="form">
+        <div id="input_box">
+            <i class="fa" aria-hidden="true"></i>
+            <li>在古代，民间在重阳有登高的风俗，故重阳节又叫“登高节”。相传此风俗始于东汉。唐代文人所写的登高诗很多，大多是写重阳节的习俗；杜甫的七律《登高》，就是写重阳登高的名篇。登高所到之处，没有划一的规定，一般是登高山、登高塔。还有吃“重阳糕”的习俗。</li><br>
+            <li>据史料记载，重阳糕又称花糕、菊糕、五色糕，制无定法，较为随意。九月九日天明时，以片糕搭儿女头额，口中念念有词，祝愿子女百事俱高，乃古人九月作糕的本意。讲究的重阳糕要作成九层，像座宝塔，上面还作成两只小羊，以符合重阳（羊）之义。有的还在重阳糕上插一小红纸旗，并点蜡烛灯。这大概是用“点灯”、“吃糕”代替“登高”的意思，用小红纸旗代替茱萸。当今的重阳糕，仍无固定品种，各地在重阳节吃的松软糕类都称之为重阳糕。</li><br>
+            <li>重阳节正是一年的金秋时节，菊花盛开，据传赏菊及饮菊花酒，起源于晋朝大诗人陶渊明。陶渊明以隐居出名，以诗出名，以酒出名，也以爱菊出名；后人效之，遂有重阳赏菊之俗。旧时文人士大夫，还将赏菊与宴饮结合，以求和陶渊明更接近。北宋京师开封，重阳赏菊之风盛行，当时的菊花就有很多品种，千姿百态。民间还把农历九月称为“菊月”，在菊花傲霜怒放的重阳节里，观赏菊花成了节日的一项重要内容。清代以后，赏菊之习尤为昌盛，且不限于九月九日，但仍然是重阳节前后最为繁盛。</li><br>
+            <li>重阳节插茱萸的风俗，在唐代就已经很普遍。古人认为在重阳节这一天插茱萸可以避难消灾；或佩带于臂，或作香袋把茱萸放在里面佩带，还有插在头上的。大多是妇女、儿童佩带，有些地方，男子也佩带。重阳节佩茱萸，在晋代葛洪《西经杂记》中就有记载。除了佩带茱萸，人们也有头戴菊花的。唐代就已经如此，历代盛行。清代，北京重阳节的习俗是把菊花枝叶贴在门窗上，“解除凶秽，以招吉祥”。这是头上簪菊的变俗。宋代，还有将彩缯剪成茱萸、菊花来相赠佩带的。</li><br>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+
+    //界面加载完毕执行以下程序
+    $(function(){
+        //定义i变量为动态控制图片轮播做准备，i的值与每张图片进行一一的对应
+        var i=0;
+        //时间变量，为自动轮播以及对光标的影响做出相应的反应
+        var timer=null;
+        //根据图片的张数动态添加圆点个数
+        for (var j = 0; j < $('.img li').length; j++) {
+            $('.num').append('<li></li>');
+        }
+        //默认情况下的第一个圆点进行背景设计
+        $('.num li').first().addClass('active');
+        //根据光标的影响控制按钮的显示和隐藏
+        $('.banner').hover(function(){
+            $('.btn').show();
+        },function(){
+            $('.btn').hide();
+        });
+        //将第一张图片复制并添加到img部分下与前五张图片相接
+        var firstimg=$('.img li').first().clone(); //复制第一张图片
+        $('.img').append(firstimg).width($('.img li').length*($('.img img').width()));
+        //定时器自动轮播
+        timer=setInterval(function(){
+            i++;
+            if (i==$('.img li').length) {
+                i=1;
+                $('.img').css({left:0});//保证无缝轮播，设置left值
+            }
+            //进行下一张图片
+            $('.img').stop().animate({left:-i*1024},2000);
+            //圆点跟着变化
+            if (i==$('.img li').length-1) {
+                $('.num li').eq(0).addClass('active').siblings().removeClass('active');
+            }else{
+                $('.num li').eq(i).addClass('active').siblings().removeClass('active');
+            }
+        },2000);
+        //鼠标移入，暂停自动播放，移出，开始自动播放
+        $('.banner').hover(function(){
+            clearInterval(timer);
+        },function(){
+            timer=setInterval(function(){
+                i++;
+                if (i==$('.img li').length) {
+                    i=1;
+                    $('.img').css({left:0});
+                };
+                //进行下一张图片
+                $('.img').stop().animate({left:-i*1024},1000);
+                //圆点跟着变化
+                if (i==$('.img li').length-1) {
+                    $('.num li').eq(0).addClass('active').siblings().removeClass('active');
+                }else{
+                    $('.num li').eq(i).addClass('active').siblings().removeClass('active');
+                }
+            },2000)
+        });
+        //上一个按钮
+        $('.prev').click(function(){
+            i--;
+            if (i==-1) {
+                i=$('.img li').length-2;
+                $('.img').css({left:-($('.img li').length-1)*1024});
+            }
+            $('.img').stop().animate({left:-i*1024},500);
+            $('.num li').eq(i).addClass('active').siblings().removeClass('active');
+        });
+        // 下一个按钮
+        $('.next').click(function(){
+            i++;
+            if (i==$('.img li').length) {
+                i=1; //这里不是i=0
+                $('.img').css({left:0});
+            };
+            $('.img').stop().animate({left:-i*1024},1000);
+            if (i==$('.img li').length-1) { //设置小圆点指示
+                $('.num li').eq(0).addClass('active').siblings().removeClass('active');
+            }else{
+                $('.num li').eq(i).addClass('active').siblings().removeClass('active');
+            };
+
+        });
+        //鼠标划入圆点
+        $('.num li').mouseover(function(){
+            var _index=$(this).index();
+            //维持i变量控制的对应关系不变
+            i = _index;
+            $('.img').stop().animate({left:-_index*1024},100);
+            $('.num li').eq(_index).addClass('active').siblings().removeClass('active');
+        });
+
+    })
+</script>
+</html>

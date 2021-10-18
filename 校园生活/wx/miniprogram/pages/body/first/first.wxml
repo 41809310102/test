@@ -1,0 +1,66 @@
+
+<view class="main">
+<view class="search">
+    <navigator url="search/search">
+      <view class="search-text">
+        <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+        搜 索
+      </view>
+    </navigator>
+  </view>
+
+
+  <swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  width="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <scroll-view class="major" scroll-x>   
+      <navigator  class="box" url="../../menu/shongchan/shongchan">
+        <image class="pic" src="/images/1.png"/>
+        <view class="txt">在线定餐</view>
+      </navigator>
+      <navigator class="box" url="../../menu/updown/updown">
+        <image class="pic" src="/images/2.png"/>
+        <view class="txt">校园打印</view>
+      </navigator>
+      <navigator class="box" url="../../menu/kuaidi/kuaidi">
+        <image class="pic" src="/images/3.png"/>
+        <view class="txt">快递代收</view>
+      </navigator>
+      <navigator class="box" url="../../menu/category/category">
+        <image class="pic" src="/images/4.png"/>
+        <view class="txt">店铺外卖</view>
+      </navigator>
+      <navigator class="box" url="../../menu/biaobai/biaobai">
+        <image class="pic" src="/images/5.png"/>
+        <view class="txt">表白墙</view>
+      </navigator>  
+      <navigator class="box" url="../../menu/makefirend/makefirend">
+        <image class="pic" src="/images/5.png"/>
+        <view class="txt">交友聚会</view>
+      </navigator>   
+</scroll-view>
+  <view class="newest">
+    <view class="newest-title">
+      <text>校园最新资讯</text>
+    </view>
+    <view class="newest-box">
+      <block wx:for="{{new_product}}" wx:item="item" wx:key="index">
+        <view class="newest-list" bindtap='cart' data-url="{{item}}">
+            <image src="{{item.url}}" mode='widthFix'></image>
+            <view class="newest-text1">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="newest-text ">
+              <text  class='cruuent_price'>¥ {{filter.tofix(item.ago_price)}}</text>
+              <text class='newest-text-child'>{{item.sales_volume}}人付款</text>
+            </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

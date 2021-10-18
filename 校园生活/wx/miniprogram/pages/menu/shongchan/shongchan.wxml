@@ -1,0 +1,31 @@
+<view class="top">
+  <input placeholder="搜索美食名称" class="search" />
+  <text class="searchbtn" >搜索</text>
+</view>
+
+<view class="body">
+  <view class="left">
+    <view  wx:for="{{left_name}}" wx:key="index" bindtap="selectId" data-name="{{item.name}}"
+     class="{{name == item.name ? 'left_name_hover' : ''}}">
+      <view class="name">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="right">
+    <image src="https://tse1-mm.cn.bing.net/th/id/OIP.0bqXaOfn1gZM-gjnydJb7AHaCA?w=321&h=95&c=7&o=5&dpr=1.25&pid=1.7" mode="widthFix"></image>
+ 
+<view  class="menuList menuList2" wx:for="{{product}}"  wx:key="index" bindtap="GoToProduct" data-id="{{item.id}}" >
+  <image src="{{item.picture}}"></image>
+    <view class="P_message">
+      <view>{{item.name}}</view>
+      <view class="P_small">地点：{{item.local}}</view>
+      <view class="P_small" catchtap="donothing">现有：{{item.number}}份</view>
+      <view class="P_bottom" catchtap="donothing">
+        <view>
+          <text class="price">¥{{item.zhekou}} </text>
+          <text class="line_t">¥{{item.pirce}}</text> 
+        </view>
+      </view> 
+    </view>
+  </view>
+</view >
+</view>

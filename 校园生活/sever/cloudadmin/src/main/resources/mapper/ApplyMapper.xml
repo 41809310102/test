@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.naughty.userlogin02.dao.ApplyDao">
+    <select id="getApplyByusername" resultType="java.lang.Integer">
+       	SELECT count(id) FROM apply
+       	WHERE applymanname=#{applymanname} AND isadmin=#{isadmin}
+    </select>
+
+    <select id="getAllApply" resultType="com.naughty.userlogin02.bean.Apply">
+       	SELECT * FROM apply
+        <if test="applymanname !=null ">
+            WHERE applymanname like #{applymanname}
+        </if>
+        LIMIT #{pageStart},#{pageSize}
+    </select>
+
+    <select id="getApplyCounts" resultType="java.lang.Integer">
+       	SELECT count(*) FROM apply
+        <if test="applymanname !=null ">
+            WHERE applymanname like #{applymanname}
+        </if>
+    </select>
+
+    <select id="getUpdateUser" resultType="com.naughty.userlogin02.bean.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <update id="updateIsvip">
+        UPDATE apply SET isvip = #{isvip} WHERE id = #{id}
+    </update>
+
+       <update id="updateIsadmin">
+            UPDATE apply SET isadmin = #{isadmin} WHERE id = #{id}
+        </update>
+
+           <update id="updateIsdelect">
+                UPDATE apply SET isdelect = #{isdelect} WHERE id = #{id}
+            </update>
+
+    <insert id="addUser">
+        INSERT INTO user
+        (username,password,email,role,state)
+        VALUE
+        (#{username},#{password},#{email},#{role},#{state})
+    </insert>
+
+    <update id="editUser">
+        UPDATE user SET username = #{username} , password = #{password} ,
+        email = #{email} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteApply">
+        DELETE FROM apply WHERE id = #{id}
+    </delete>
+
+</mapper>

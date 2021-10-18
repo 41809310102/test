@@ -28,7 +28,7 @@ Page({
       })
       let that = this;
       wx.request({
-        url: 'http://49.232.127.127:8080/xskc/regServlet ', 
+        url: 'http://localhost:8080/xskc/regServlet ', 
         data: {
           username: this.data.stuName,
           studentid: this.data.stuId,
