@@ -1,0 +1,127 @@
+*{
+	
+	font-family:楷体; 
+}
+#container{
+	margin:0 auto;
+	padding:0 auto;font-size:12px;
+}
+#header{
+	width:990px;
+	height:80px;
+}
+#logo{
+	width:300px;
+	height:80px;
+	float:left;
+	background:#FFFFFF url("../images/王者荣耀logo.png") no-repeat left bottom;
+	
+}
+#select_search{
+	width:690px;
+	height:80px;
+	font-size:20px
+	background:#FFFFFF;
+	float:left;
+}
+#nav{
+	clear:both;
+	width:990px;
+	height:40px;
+	font-size:18px;
+	background-image:url("../images/导航背景.png")
+}
+#nav a:hover{
+	color:#Bf0000;
+	text-decoration:none;
+}
+#nav td{
+	width:165px;
+	height:40px;
+	text-align:center;
+	vertical-align:middle; 
+}
+table{
+	line-height:1.5em
+}
+a:link,a:visited,a:active{
+	text-decoration:none;
+}
+a:link,a:visited,a:active{
+	color:#828282;
+}
+h3{
+	font-size:30px;
+	font-family:宋体;
+	font-style:bolder;
+	color:#ffff00;
+	margin:0
+}
+#join{
+	clear:both;
+	width:990px;
+	height:500px;
+	background-image:URL("../images/join背景.jpg")
+}
+#join_zuo{
+	float:left;
+	margin-top:150px;
+	width:330px;
+	height:300px;
+}
+ul{
+	list-style:none;
+	padding-left:10px;
+	line-height:1.8em;
+	color:#727272
+}
+ul li{
+	font-size:20px;
+	font-weight:bold;
+}
+#join_zhong{
+	float:left;
+	margin-top:150px;
+	width:330px;
+	height:300px;
+}
+#join_you{
+	float:left;
+	margin-top:150px;
+	width:330px;
+	height:300px;
+}
+
+#comment{
+	clear:both;
+	float:left;
+	width:990px;
+	height:210px;
+	background-image:url("../images/留言底.jpg")
+}
+
+#footer{
+	clear:both;
+	width:990px;
+	height: 60px;
+	float:left;
+	background: #330033;
+	text-align: center;
+	line-height: 10px;
+}
+#footer p{ 
+	color: #ffff00;
+	font-size: 15px;
+	opacity: 0.7; 
+}
+.p1{ 
+	margin: 0;
+	padding: 15px 0 5px 0;
+}
+.p2{ 
+	margin: 0;
+	padding: 5px 0;
+}
+#footer span{
+	color: #aaffff;
+}

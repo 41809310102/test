@@ -24,7 +24,7 @@ Page({
       id:this.options.id,
     })
     wx.request({
-      url: 'http://192.168.101.219:9000/getrestfooddesc',
+      url: app.globalData.ip+'getrestfooddesc',
       data: {
         id:this.data.id,
       },

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/menu/shongchan/shongchan",
     "pages/body/index/index",
+    "pages/menu/shongchan/shongchan",
     "pages/body/first/first",
     "pages/body/action/actiont",
     "pages/body/video/video",
@@ -13,7 +13,8 @@
     "pages/menu/makefirend/makefirend",
     "pages/menu/shongchan/detail/detail",
     "pages/menu/shongchan/foodsumit/foodsumit",
-    "pages/menu/shongchan/address/address"
+    "pages/menu/shongchan/address/address",
+    "pages/menu/shongchan/address/addaddress/addaddress"
   
   ],
   "window": {

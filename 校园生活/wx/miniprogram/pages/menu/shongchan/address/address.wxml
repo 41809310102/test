@@ -4,13 +4,13 @@
       <view class="name">
         <view class="phone">{{item.address}}</view>
         <view class="namePhone">
-          <text>{{item.name}}</text> 
-          <text>{{item.phone}}</text>
+          <text>{{item.username}}|{{item.usersex}}</text> 
+          <text>{{item.userphone}}</text>
         </view>        
       </view>
     </view>
     <view class="Edit">
-      <text data-id="{{index}}" bindtap="chooseAddress"><text class="{{num==index?'quan iconfont icon-true':'quan'}}"></text> 设为默认</text>
+      <text data-id="{{index}}" bindtap="chooseAddress"><text class="{{item.ismoren?'quan iconfont icon-true':'quan'}}"></text> 设为默认</text>
       <text class="iconfont icon-edit" data-id="{{index}}" bindtap="toEdit"> 编辑</text>
       <text class="iconfont icon-del" data-id="{{index}}" bindtap="delAddress"> 删除</text>
     </view>

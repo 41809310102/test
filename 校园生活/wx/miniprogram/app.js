@@ -26,6 +26,7 @@ App({
     selected_crats1: [],
     hasLogin: false,
     openid:'',
+    user_id:'',
     Users:false,
     userInfo: null,
     location: "",
@@ -33,7 +34,8 @@ App({
     address: '',
     buycar_num: 0,
     totalMoney: 0,
-    totalSecond: 899
+    totalSecond: 899,
+    ip:'http://192.168.31.152:9000/'
   },
   
   openid() {

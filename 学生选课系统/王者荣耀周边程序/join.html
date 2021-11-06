@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>加入我们</title>
+  <script  src="js/join.js" charset="gb2312"></script>
+  <script src="js/comment.js"></script>
+  <link rel="stylesheet" href="css/join.css">
+ </head>
+ <body>
+ <!-- 大框 -->
+ <div id="container">
+	<!--  1头部-->
+	<div id="header">
+		<div id="logo"></div>
+		<div id="select_search">
+			<table height="80px" align="right" >
+				<tr align="right">
+					<td colspan="4">
+						<select id="sel">
+							<option selected>简体中文</option>
+							<option >繁体中文</option>
+							<option >English</option>
+						</select>
+					</td>
+				</tr>
+				<tr align="right">
+					<td><font size="2">关键词:</font></td>
+					<td><input type="text" size="25"></td>
+					<td><input type="image" src="images/搜索.png"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 2导航栏 -->
+	<div id="nav">
+		<table>
+			<td ><a href="index.html">首页</a></td>
+			<td ><a href="game_introduction.html">游戏介绍</a></td>
+			<td ><a href="game_tips.html">游戏攻略</a></td>
+			<td ><a href="toy.html">手办商城</a></td>
+			<td ><a href="survey.html">问卷调查</a></td>
+			<td ><a href="">加入我们</a></td>
+			
+		</table>
+	</div>
+	<!--  3左中右-->
+	<div id="join">
+	<div id="join_zuo">
+		<img src="images/联系我们.png" width="200px" height="40px">
+			<ul>
+				<li>咨询热线：1234567890</li>
+				<li>固定电话：0758-8555401</li>
+				<li>Email:2698876606.qq.com</li>
+				<li>Wechat:13682356327</li>
+			</ul>
+		</div>
+			<div id="join_zhong">
+        <h2>欢迎你的加入，请填写以下信息</h2>
+        <form action="">
+           <table class="tab02">
+               <tr>
+                   <td>姓名:</td>
+                   <td><input id="txtName" name="txtName" type="text" style="opacity:0.8"/></td>
+               </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td><label for="boy"><input id="boy" name="sex" type="radio" style="opacity:0.8"/>男</label>&nbsp;&nbsp;
+						<label for="girl"><input id="girl" name="sex" type="radio" style="opacity:0.8"/>女</label></td>
+                </tr>
+               <tr>
+                   <td>出生日期:</td>
+                   <td><input type="date" style="opacity:0.8"/></td>
+               </tr>
+               <tr>
+                   <td>特长:</td>
+                   <td><input type="checkbox" style="opacity:0.8"/>电商<input type="checkbox" style="opacity:0.8"/>剪辑<input type="checkbox" style="opacity:0.8"/>运营</td>
+               </tr>
+               <tr align="center">
+                   <td>
+						<input type="submit" value="提交" onclick="check6()" >
+				   </td>
+				   <td><input type="reset" value="重置"></td>
+               </tr>
+
+
+           </table>
+        </form>
+		</div>
+		<div id="join_you">
+		<img src="images/王者官方微博.jpg" id="img1" />
+		<input type="button" value="展开QR" onclick="showImg()"/>
+		<input type="button" value="收起QR" onclick="hideImg()"/><br />
+    </div>
+	</div>
+	<!-- 4留言区-->
+	<div id="comment">
+		<h3 >留言板</h3>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+		<form>
+			<table align="center">
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" id="n"/></td>
+					<td>Wechat：</td>
+					<td><input type="text" id="x"/></td>
+					<td>留言时间：</td>
+					<td><input type="text" id="t"/></td>
+				</tr>
+				<tr>
+					<td >留言内容：</td>
+					<td colspan="5"><textarea id="txt" cols="100" rows="3" placeholder="评论的时候，请遵纪守法并注意语言文明"></textarea></td>
+              
+				</tr>
+
+				<tr >
+					<td colspan="2"><input type="submit" value="提交留言" onclick="check()"></th>
+					<td colspan="2"><input type="reset" value="重置内容"></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 脚部 -->
+	<div id="footer" >
+		<p class="p1">Copyright&nbsp;&copy;&nbsp;2021&nbsp;<span>Li&nbsp;帅哥</span>,All&nbsp;rights&nbsp;reserved.</p>
+		<p class="p2">2021,版权所有&nbsp;帅哥&nbsp;85CP备13385453</p>
+	</div>
+ </div>
+  
+ </body>
+</html>

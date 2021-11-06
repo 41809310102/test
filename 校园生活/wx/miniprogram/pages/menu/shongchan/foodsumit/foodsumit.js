@@ -4,9 +4,11 @@ Page({
   data: {
     block: false,
     restaurant: false,
+    addressok:'',
     check: true,
     foodorder:[],
-    totalMoney: 0
+    totalMoney: 0,
+    usre_id:''
   },
 
   onLoad: function() {
@@ -14,7 +16,27 @@ Page({
     this.setData({
       foodorder: app.globalData.selected_crats,
       totalMoney: this.options.totalMoney,
+      user_id: app.globalData.user_id,
     })
+    wx.request({
+    url: app.globalData.ip+'getuseraddressok',
+    data: {
+      user_id:this.data.user_id,
+    },
+   success: function(res) {
+    console.log(res)
+    for(var i = 0;i<res.data.length;i++){
+          if(res.data[i].ismoren==true){
+            that.setData({
+              addressok:res.data[i],
+            })
+          }
+    }
+    if(res.data!=null){
+     console.log('保存成功')
+    }
+    }
+  })
   },
 
   calling: function() {

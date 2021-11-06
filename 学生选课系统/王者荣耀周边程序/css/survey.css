@@ -1,0 +1,164 @@
+*{
+	font-family:楷体; /*全文字体*/
+}
+#container{
+	margin:0 auto;			/*   内外边距去除,字体大小为12px */
+	padding:0 auto;font-size:12px;
+}
+#header{			/*1*/
+	width:990px;
+	height:80px;
+}
+#logo{	/*  1左上  */
+	width:300px;
+	height:80px;
+	float:left;
+	background:#FFFFFF url("../images/王者荣耀logo.png") no-repeat left bottom;
+	
+}
+#select_search{			/*	 1右上	  */
+	width:690px;
+	height:80px;
+	font-size:20px
+	background:#FFFFFF;
+	float:left;
+}
+#nav{				/*		2    */
+	clear:both;
+	width:990px;
+	height:40px;
+	font-size:18px;
+	background-image:url("../images/导航背景.png")
+}
+#nav a:hover{
+	color:#Bf0000;
+	text-decoration:none;/*去掉下划线*/
+}
+#nav td{
+	width:165px;
+	height:40px;
+	text-align:center;
+	vertical-align:middle; 
+}
+table{
+	line-height:1.5em;
+}
+a:link,a:visited,a:active{
+	text-decoration:none;
+}
+a:link,a:visited,a:active{
+	color:#828282;
+}
+h2{
+	font-size:30px;
+	font-family:宋体;
+	font-style:bolder;
+	color:#ffff00;
+	margin:0
+}
+#biaoti{	/*标题的样式*/
+	width:990px;
+	background-image:url("../images/导航背景.png");
+	float:left;
+	clear:both;
+}
+#wenjuan{		/*3*/
+	width:990px;
+	height:803px;
+	float:left;
+	clear:both;
+	background:#6abdaa;
+}
+.bt1 {
+	font-size: 35px;
+	font-family: 黑体;
+	color: #990000;
+	line-height: 100px;
+	text-align: center;
+}
+
+.td1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #ccffff;
+}
+
+#p1 {
+	text-indent: 2em;
+	font-size: 20px;
+	font-weight: bold;
+	color: #990000;
+}	
+.box{		/*4*/
+	clear:both;
+	width: 990px;
+	height: 606px;
+	border: 1px solid #dfff4a;
+ }
+ .option{
+	width: 327px;
+	height: 200px;
+	border: 1px solid #dfff4a;
+	background-color: #000000;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	line-height: 200px;
+	float: left;
+ }
+/*设置动画，以实现旋转
+第一个参数是变化的属性，all是整个盒子都进行动画；
+第二个参数0.5s是动画执行的时间;
+第三个参数是动画的方式：linear(匀速),ease-in由慢到快,ease-out由快到慢，ease-in-out慢到快到慢
+第四个参数是动画延时多久再执行*/
+.box .five{
+	transition: all 0.5s ease-in-out 0s;
+ }
+.box .five:hover{
+	cursor: pointer;
+	font-size: 35px;
+	color: #494aff;
+	background-color: white;
+	 /*放大倍数，转换的角度*/
+	 /* transform: scale(1.2) rotate(360deg);*/
+ }
+img{
+	width:325px;
+	height:200px;
+	opacity:0.8;
+}
+#comment{		/*5*/
+	clear:both;
+	width:990px;
+	height:210px;
+	background-image:url("../images/留言底.jpg");
+	float:left
+}
+input{ 
+	vertical-align: middle;
+} /*垂直居中*/
+#footer{			/*6*/
+	clear:both;
+	width:990px;
+	height: 60px;
+	background: #330033;
+	text-align: center;
+	line-height: 10px;
+	float:left
+}
+#footer p{ 
+	color: #ffff00;
+	font-size: 15px;
+	opacity: 0.7; 
+}
+.p1{ 
+	margin: 0;
+	padding: 15px 0 5px 0;
+}
+.p2{ 
+	margin: 0;
+	padding: 5px 0;
+}
+#footer span{
+	color: #aaffff;
+}

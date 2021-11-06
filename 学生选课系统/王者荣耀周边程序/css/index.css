@@ -1,0 +1,182 @@
+/*index.css*/
+*{
+	margin-left：200px;
+	font-family:楷体; /*全文字体*/
+}
+#container{
+	margin:0 auto;			/*   内外边距去除,字体大小为12px */
+	padding:0 auto;font-size:12px;
+}
+#header{			/*1 头部*/
+	width:990px;
+	height:80px;
+}
+#logo{	/*  1左上 logo */
+	width:300px;
+	height:80px;
+	float:left;
+	background:#FFFFFF url("../images/王者荣耀logo.png") no-repeat left bottom;
+	
+}
+#select_search{			/*	 1右	  搜索*/
+	width:690px;
+	height:80px;
+	font-size:20px;
+	background:#FFFFFF;
+	float:left;
+}
+#nav{				/*		2  导航栏  */
+	clear:both;
+	width:990px;
+	height:40px;
+	font-size:18px;
+	background-image:url("../images/导航背景.png")
+}
+#nav a:hover{
+	color:#Bf0000;
+	text-decoration:none;
+}
+#nav td{
+	width:165px;
+	height:40px;
+	text-align:center;
+	vertical-align:middle; 
+}
+table{
+	line-height:1.5em
+}
+#bao{					/*  3图片轮播  */
+	width: 990px;
+	height: 500px;
+	overflow: hidden;
+}
+#photo {			/*图片轮播*/
+	width: 5940px;
+	animation: switch 15s ease-out infinite;
+}
+#photo > img {
+	float: left;
+	width: 990px;
+	height: 500px;
+}
+@keyframes switch {
+	0%, 5% {
+		margin-left: 0;
+	}
+	20%, 30% {
+		margin-left: -990px;
+	}
+	40%, 55% {
+		margin-left: -1980px;
+	}
+	60%, 75% {
+		margin-left: -2970px;
+	}
+	85%, 100% {
+		margin-left: -3960px;
+	}
+}
+
+#main{				/* 4   */
+	width:1300px;
+	height:330px;
+	border-bottom:5px ridge #DEDEDE;
+	float:left;
+	clear:both
+}
+#left{		/*4左*/
+	width:260px;
+	height:230px;
+	background:#EEFFDD;
+	float:left;
+	background-image:url("../images/left背景.png")
+	/*border-right:10px solid #FFFFFF*/
+}
+a:link,a:visited,a:active{
+	text-decoration:none;
+}
+a:link,a:visited,a:active{
+	color:#828282;
+}
+ul{
+	list-style:none;
+	padding-left:10px;
+	line-height:1.8em
+}
+#left li{
+	border-bottom:1px dotted #009900;
+}
+#left a:hover{
+	color:#Bf0000;
+	text-decoration:underline
+}
+#center{		/*4中*/
+	width:480px;
+	height:230px;
+	float:left;
+	/*border-right:5px solid #FFFFFF;*/
+	background-image:url("../images/滚底.png")
+}
+#right{		/*4右  登录部分*/
+	width:250px;
+	height:230px;
+	background:#EEFFDD;
+	float:left;
+	background-image:url("../images/right背景.png")
+}
+.register{	/*登录*/
+	flex: 40%;
+	padding-top: 20px; 
+}
+.wjmmzczh{
+	padding-left: 50px;
+	padding-top: 20px;
+}
+#zczh{
+	padding-left: 50px;
+}
+#biaodan{
+	padding-top: 20px;
+}
+h2{
+	font-size:30px;
+	font-family:宋体;
+	font-style:bolder;
+	color:#ffff00;
+	margin:0
+}
+#comment{		/*5  评论区*/
+	clear:both;
+	width:990px;
+	height:210px;
+	background-image:url("../images/留言底.jpg");
+	float:left
+}
+input{ 
+	vertical-align: middle;
+} /*垂直居中*/
+#footer{			/*6 尾部*/
+	clear:both;
+	width:990px;
+	height: 60px;
+	background: #330033;
+	text-align: center;
+	line-height: 10px;
+	float:left
+}
+#footer p{ 
+	color: #ffff00;
+	font-size: 15px;
+	opacity: 0.7; 
+}
+.p1{ 
+	margin: 0;
+	padding: 15px 0 5px 0;
+}
+.p2{ 
+	margin: 0;
+	padding: 5px 0;
+}
+#footer span{
+	color: #aaffff;
+}

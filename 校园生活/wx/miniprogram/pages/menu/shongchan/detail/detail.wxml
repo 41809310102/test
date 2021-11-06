@@ -1,5 +1,5 @@
 <view class="detailPic">
-  <image src="../{{products.picture}}"></image>
+  <image src="{{products.picture}}"></image>
 </view>
 <view class="messageBlock">
   <view class="Message">

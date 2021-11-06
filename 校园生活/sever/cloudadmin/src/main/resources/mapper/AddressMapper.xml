@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.naughty.userlogin02.dao.AddressDao">
+
+    <select id="getAlladdress" resultType="com.naughty.userlogin02.bean.Address">
+        SELECT * FROM address
+        <if test="user_id !=null ">
+            WHERE user_id = #{user_id}
+        </if>
+        LIMIT #{pageStart},#{pageSize}
+    </select>
+
+    <select id="getAddressCounts" resultType="java.lang.Integer">
+        SELECT count(*) FROM address
+        <if test="address !=null ">
+            WHERE address like #{address}
+        </if>
+    </select>
+
+    <update id="updateIsmoren">
+        UPDATE address SET ismoren = #{ismoren} WHERE id = #{id}
+    </update>
+
+    <update id="updataOtherismoren">
+        UPDATE address SET ismoren = #{ismoren} WHERE id != #{id}
+    </update>
+
+    <insert id="addAddress">
+        INSERT INTO address
+        (address,user_id,ismoren)
+        VALUE
+        (#{address},#{user_id},#{ismoren})
+    </insert>
+
+
+    <select id="delectAddress" >
+         DELETE FROM address WHERE id = #{id}
+    </select>
+
+</mapper>

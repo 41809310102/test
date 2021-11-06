@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>toy</title>
+  <script  src="js/toy.js"></script>
+  <script  src="js/comment.js"></script>
+  <link rel="stylesheet" href="css/toy.css">
+ </head>
+ <body>
+ <!--大框  -->
+ <div id="container">
+	<!--1头部  -->
+	<div id="header">
+		<div id="logo"></div>
+		<div id="select_search">
+			<table height="80px" align="right" >
+				<tr align="right">
+					<td colspan="4">
+						<select id="sel">
+							<option selected>简体中文</option>
+							<option >繁体中文</option>
+							<option >English</option>
+						</select>
+					</td>
+				</tr>
+				<tr align="right">
+					<td><font size="2">关键词:</font></td>
+					<td><input type="text" size="25"></td>
+					<td><input type="image" src="images/搜索.png"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 2导航栏 -->
+	<div id="nav">
+		<table>
+			<td><a href="index.html">首页</a></td>
+			<td><a href="game_introduction.html">游戏介绍</a></td>
+			<td><a href="game_tips.html">游戏攻略</a></td>
+			<td><a href="toy.html">手办商城</a></td>
+			<td><a href="survey.html">问卷调查</a></td>
+			<td><a href="join.html">加入我们</a></td>
+		</table>
+	</div>
+	<!--3购物区  -->
+	<div id="gouwu">
+		<form name="lzjForm" method="post" action="">
+		<table id="shouban">
+			<tr>
+				<td colspan="3" id="table_title"></td>
+			</tr>
+			<tr id="one">
+				<td>
+					<img src="images/西施手办.png"><br>
+					<h4>幻纱之灵西施Q版手办</h4>
+					<input type="checkbox" name="sp0" value="2576" onclick="checkSelect(0);">￥ 257.00<br>
+				</td>			<!-- 内容：图片，文字，checkbox控件 -->
+				<td>
+					<img src="images/貂蝉手办.png"><br>
+					<h4>仲夏夜之梦貂蝉Q版手办</h4>
+					<input type="checkbox" name="sp1" value="2999" onclick="checkSelect(1);">￥ 299.00<br>
+				</td>			<!-- 内容：图片，文字，checkbox控件 -->
+				<td>
+					<img src="images/非洲猴手办.png"><br>
+					<h4>地狱火非洲猴Q版手办</h4>
+					<input type="checkbox" name="sp2" value="3898" onclick="checkSelect(2);">￥ 389.00<br></td>			<!-- 内容：图片，文字，checkbox控件 -->
+			</tr>
+			<tr id="two">
+				<td>
+					<img src="images/李白薄荷糖.png"><br>
+					<h4>超级薄荷黑旋风李白薄荷糖</h4>
+					<input type="checkbox" name="sp3" value="699" onclick="checkSelect(3);">￥ 69.00<br></td>
+				</td>			
+				<td>
+					<img src="images/鲁班七号充电宝.png"><br>
+					<h4>99万毫安的鲁班充电宝</h4>
+					<input type="checkbox" name="sp4" value="699" onclick="checkSelect(4);">￥ 59.00<br></td></td>			<!-- 内容：图片，文字，checkbox控件 -->
+				<td>
+					<img src="images/露娜.png"><br>
+					<h4>一生所爱露娜Q版手办</h4>
+					<input type="checkbox" name="sp5" value="699" onclick="checkSelect(5);">￥ 69.00<br></td></td></td>			<!-- 内容：图片，文字，checkbox控件 -->
+			</tr>
+			<tr>
+				<td colspan="3">
+					<input class="myBtn" type="button" value="查看购物车" onclick="shoppingCart()">
+					<input class="myBtn" type="button" value="收银台结算" onclick="checkOut()">
+					<input class="myBtn" type="button" value="初始化参数" onclick="clearAll()">
+				</td>			<!-- 内容：3个button控件 -->
+			</tr>
+			<tr >
+				<td colspan="3" id="end"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	<!--4留言  -->
+	<div id="comment">
+		<h2 >留言板</h2>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+		<form>
+			<table align="center">
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" id="n"/></td>
+					<td>Wechat：</td>
+					<td><input type="text" id="x"/></td>
+					<td>留言时间：</td>
+					<td><input type="text" id="t"/></td>
+				</tr>
+				<tr>
+					<td >留言内容：</td>
+					<td colspan="5"><textarea id="txt" cols="100" rows="3" placeholder="评论的时候，请遵纪守法并注意语言文明"></textarea></td>
+              
+				</tr>
+
+				<tr >
+					<td colspan="2"><input type="submit" value="提交留言" onclick="check()"></th>
+					<td colspan="2"><input type="reset" value="重置内容"></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!--5脚部  -->
+	<div id="footer" >
+		<p class="p1">Copyright&nbsp;&copy;&nbsp;2021&nbsp;<span>Li&nbsp;帅哥</span>,All&nbsp;rights&nbsp;reserved.</p>
+		<p class="p2">2021,版权所有&nbsp;帅哥&nbsp;85CP备13385453</p>
+	</div>
+ </div>
+  
+  
+ </body>
+</html>

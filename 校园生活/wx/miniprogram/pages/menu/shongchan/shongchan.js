@@ -34,14 +34,13 @@ Page({
   selectId(res){
     var that = this;
     var name = res.currentTarget.dataset.name;
-    var name_1 = '';
     var array = [];
     console.log(name);
     that.setData({
       name:name
     })
     wx.request({
-      url: 'http://192.168.101.219:9000/getrestfood',
+      url: app.globalData.ip+'getrestfood',
       data: {
       },
       header: {
@@ -53,16 +52,13 @@ Page({
      //  wx.setStorageSync('username', res.data.data.username)
      //  var name= wx.getStorageSync('username')
     //   console.log(name)
+        
         console.log(res.data);
         console.log(res.errMsg)
         that.setData({
           all:res.data
         })
         if (res.data!=null) {
-          wx.showToast({
-            title: '更新成功...',
-            icon: 'none'
-          })
               // 这里还可以写一些登录成功后的操作，比如登录成功后跳转到首页之类的
         }else {
           if (res.data==null) {
@@ -73,6 +69,18 @@ Page({
             })
           }
         }
+        for(var j = 0; j < that.data.all.length; j++){
+          if(that.data.all[j].fenlei == name){
+            array.push(that.data.all[j]);
+          }else if(name=='全部'){
+            array.push(that.data.all[j]);
+          }
+        }
+        console.log("all"+that.data.all)
+        that.setData({
+          product:array
+        })
+        console.log(that.data.product)
       }
       } )
     // for(var i = 0; i < that.data.left_name.length;i++){
@@ -81,18 +89,6 @@ Page({
     //     name_1 = that.data.left_name[i].name;
     //   }
     // }
-    for(var j = 0; j < that.data.all.length; j++){
-      if(that.data.all[j].fenlei == name){
-        array.push(that.data.all[j]);
-      }else if(name=='全部'){
-         array.push(that.data.all[j]);
-      }
-    }
-    console.log("all"+that.data.all)
-    that.setData({
-      product:array
-    })
-    console.log(that.data.product)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -101,11 +97,12 @@ Page({
     var that = this;
     var array = [];
     var name = app.globalData.name;
-    wx.showLoading({
+    wx.showToast({
       title: '加载中',
+      icon: 'none'
     })
     wx.request({
-      url: 'http://192.168.101.219:9000/getrestaurant',
+      url: app.globalData.ip+'getrestaurant',
       data: {
       },
       header: {
@@ -171,9 +168,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    this.onLoad();
-  },
+
 
   /**
    * 生命周期函数--监听页面隐藏

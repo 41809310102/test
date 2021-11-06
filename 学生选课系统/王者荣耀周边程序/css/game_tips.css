@@ -1,0 +1,130 @@
+/*game_tips.css*/
+*{	
+	font-family:楷体; 
+}
+#container{
+	margin:0 auto;
+	padding:0 auto;
+	font-size:12px;
+}
+#header{
+	width:990px;
+	height:80px;
+}
+#logo{
+	width:300px;
+	height:80px;
+	float:left;
+	background:#FFFFFF url("../images/王者荣耀logo.png") no-repeat left bottom;
+	
+}
+#select_search{
+	width:690px;
+	height:80px;
+	font-size:20px
+	background:#FFFFFF;
+	float:left;
+}
+#nav{
+	clear:both;
+	width:990px;
+	height:40px;
+	font-size:18px;
+	background-image:url("../images/导航背景.png");
+	float:left
+}
+#nav a:hover{
+	color:#Bf0000;
+	text-decoration:none;
+}
+#nav td{
+	width:165px;
+	height:40px;
+	text-align:center;
+	vertical-align:middle; 
+}
+table{
+	line-height:1.5em
+}
+a:link,a:visited,a:active{
+	text-decoration:none;
+}
+a:link,a:visited,a:active{
+	color:#828282;
+}
+h2{
+	font-size:30px;
+	font-family:宋体;
+	font-style:bolder;
+	color:#ffff00;
+	margin:0
+}
+#hero_picture{
+	clear:both;
+	width:990px;
+	height:400px;
+	background-image:url("../images/tips底片.jpg");
+	background-repeat:no-repeat
+	background-size:990px 400px;;
+	float:left;
+}
+#hero_tips td:hover{
+	background: #fbfbfb;
+}
+#hero_left{
+	padding-top:20px;
+	padding-left:70px;
+	float:left;
+	
+}
+#hero_right{
+	padding-top:20px;
+	float:right;
+	width:640px;
+}
+#video{
+	width:990px;
+	height:1000px;
+	background:#99ffff;
+	
+}
+#video table{
+	text-align:center;
+	font-size:20px;
+	font-weight:bolder;
+	
+}
+#comment{
+	float:left;
+	clear:both;
+	width:990px;
+	height:200px;
+	background-image:url("../images/留言底.jpg")
+}
+input{ 
+	vertical-align: middle;
+} /*垂直居中*/
+#footer{ 
+	clear:both;
+	width:990px;
+	height:60px;
+	background: #330033;
+	text-align: center;
+	line-height: 10px;
+}
+#footer p{ 
+	color: #ffff00;
+	font-size: 15px;
+	opacity: 0.7; 
+}
+.p1{ 
+	margin: 0;
+	padding: 15px 0 5px 0;
+}
+.p2{ 
+	margin: 0;
+	padding: 5px 0;
+}
+#footer span{
+	color: #aaffff;
+}

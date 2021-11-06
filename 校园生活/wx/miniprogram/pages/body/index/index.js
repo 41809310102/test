@@ -109,7 +109,7 @@ Page({
         wx.setStorageSync('password', this.data.pass)
 
         wx.request({
-          url: 'http://192.168.101.219:9000/stuoflogin',
+          url: app.globalData.ip+'stuoflogin',
           data: {
             studentid:this.data.mobile,
             password:this.data.pass
@@ -125,7 +125,10 @@ Page({
         //   console.log(name)
             console.log(res.data);
             console.log(res.errMsg)
-            if (res.data=="ok") {
+            var user_id = res.data.id;
+            app.globalData.user_id = user_id;
+            console.log(app.globalData.user_id);
+            if (res.data!=null) {
                   wx.showLoading({
                     title: '登录成功...'
                   })
@@ -172,13 +175,12 @@ Page({
 
                     key: 'userId',
 
-                    data: res.data[0]._id,
+                    data: res.data.id,
 
                   })
                   setTimeout(function() {
                     
                     setTimeout(function() {
-                      wx.hideLoading();
                       app.globalData.register=true;
                      wx.navigateBack({
                      })
@@ -187,7 +189,7 @@ Page({
                   // 这里还可以写一些登录成功后的操作，比如登录成功后跳转到首页之类的
             }else {
               wx.hideLoading();
-              if (res.data.flag==false) {
+              if (res.data.password!=pass) {
                 console.log('用户密码错误，请重新输入密码！');
                 wx.showToast({
                   title: '用户密码错误，请重新输入密码！',

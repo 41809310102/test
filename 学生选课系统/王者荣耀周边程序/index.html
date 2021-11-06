@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>主页</title>
+   <link rel="stylesheet" href="css/index.css">
+   <script src="js/index.js" charset="gb2312"></script>
+   <script src="js/comment.js" ></script>
+ </head>
+ <body>
+ <embed src="audios/attack.mp3" width=10px height=10px type=audio/mpeg loop="-1" autostart="true" volume="0"></embed>			<!-- 音乐 -->
+ <div id="container">				<!-- 框 -->
+	<!-- 1 头部-->
+	<div id="header">			
+		<div id="logo"></div>		<!-- 1左  logo -->
+		<div id="select_search">	<!-- 1右  搜索-->
+			<table height="80px" align="right" >
+				<tr align="right">
+					<td colspan="4">
+						<select id="sel">
+							<option selected>简体中文</option>
+							<option >繁体中文</option>
+							<option >English</option>
+						</select>
+					</td>
+				</tr>
+				<tr align="right">
+					<td><font size="2">关键词:</font></td>
+					<td><input type="text" size="25"></td>
+					<td><input type="image" src="images/搜索.png"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 2  导航栏-->
+	<div id="nav">		
+		<table>
+			<td ><a href="index.html">首页</a></td>
+			<td ><a href="game_introduction.html">游戏介绍</a></td>
+			<td ><a href="game_tips.html">游戏攻略</a></td>
+			<td ><a href="toy.html">手办商城</a></td>
+			<td ><a href="survey.html">问卷调查</a></td>
+			<td ><a href="join.html">加入我们</a></td>
+			
+		</table>
+	</div>
+	<!-- 3  图片轮播-->
+	<div id="bao">		
+		<div id="photo">
+			<img src="images/a.png" >
+			<img src="images/b.png" >
+			<img src="images/c.png" >
+			<img src="images/e.png" >
+			<img src="images/f.png" >
+		</div>
+	</div >
+	<!-- 4  左中右-->
+	<div id="main">		
+		<div id="left">		<!--  4左   咨询-->
+			<img src="images/游戏资料.png" width="262ox" height="50px">
+			<ul>
+				<li><a href="https://pvp.qq.com/web201605/newsDetail.shtml?G_biz=18&tid=518558">打野位置能拿MVP的不传之秘！<a>&nbsp;2021-05-09</li>
+				<li><a href="https://pvp.qq.com/web201605/newsDetail.shtml?G_biz=18&tid=519143">新版梦奇铭文出装玩法全解析<a>&nbsp;2021-05-09</li>
+				<li><a href="https://pvp.qq.com/web201605/newsDetail.shtml?G_biz=18&tid=519427">如何理解斩杀线与控血概念？<a>&nbsp;2021-05-09</li>
+				<li><a href="https://pvp.qq.com/web201605/newsDetail.shtml?G_Biz=18&tid=512793">李白刮痧，操作太难,试试兰陵王<a>&nbsp;2021-05-09</li>
+				<li><a href="https://pvp.qq.com/v/detail.shtml?G_Biz=18&tid=719852&e_code=pvpweb.dpvlist.r4">“红烧流”庄周<a>&nbsp;2021-05-09</li>
+				<li><a href="https://pvp.qq.com/web201605/newsDetail.shtml?G_Biz=18&tid=362130">你强任你强，墨子东皇加张良<a>&nbsp;2021-05-09</li>
+			</ul>
+		</div>
+		<div id="center">	<!-- 4中  图片滚动-->
+			<marquee onmouseover="this.stop()" onmouseout="this.start()">
+				<img src="images/滚1.png" border="0" width="400px" height="230px">
+				<img src="images/滚2.jpg" border="0" width="400px" height="230px">
+				<img src="images/滚3.jpg" border="0" width="400px" height="230px">
+				<img src="images/滚4.jpg" border="0" width="400px" height="230px">
+				<img src="images/滚5.png" border="0" width="400px" height="230px">
+			</marquee>
+		</div>
+		<div id="right">		<!-- 4右 登录-->
+			<img id="ri" src="images/欢迎登录.png" width="250" height="50px"><br/>
+			<form action="" id="fo">
+				<table align="center" class="register">
+					<tr>
+						<td>用户名</td>
+						<td><input type="text" id="user01" maxlength="11" placeholder="请输入您的用户名" required/></td>
+						<td ><input type="submit" value="登录"></td>
+					</tr>
+
+					<tr id="fot">
+						<td>密码</td>
+						<td><input type="password" id="password01" maxlength="16" placeholder="请输入密码......" required/></td>	<td><input  type="reset"></td>
+					</tr>
+				</table>
+			</form> 
+			<div class="wjmmzczh">
+				<a href="#" >忘记密码</a>
+				<a href="#" id="zc">注册账号</a>
+			</div>
+		</div>
+	</div>	
+	<!-- 5 留言区-->
+	<div id="comment">		
+		<h2 >留言板</h2>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+		<form>
+			<table align="center">
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" id="n"/></td>
+					<td>Wechat：</td>
+					<td><input type="text" id="x"/></td>
+					<td>留言时间：</td>
+					<td><input type="text" id="t" placeholder=""/></td>
+				</tr>
+				<tr>
+					<td >留言内容：</td>
+					<td colspan="5"><textarea id="txt" cols="100" rows="3" placeholder="评论的时候，请遵纪守法并注意语言文明"></textarea></td>
+              
+				</tr>
+
+				<tr >
+					<td colspan="2"><input type="submit" value="提交留言" onclick="check()"></th>
+					<td colspan="2"><input type="reset" value="重置内容"></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 6 版权区-->
+	<div id="footer" >		
+		<p class="p1">Copyright&nbsp;&copy;&nbsp;2021&nbsp;<span>Li&nbsp;帅哥</span>,All&nbsp;rights&nbsp;reserved.</p>
+		<p class="p2">2021,版权所有&nbsp;帅哥&nbsp;85CP备13385453</p>
+	</div>
+ </div>
+  
+ </body>
+</html>

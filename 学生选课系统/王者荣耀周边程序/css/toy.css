@@ -1,0 +1,133 @@
+*{
+	
+	font-family:楷体; /*全文字体*/
+}
+#container{
+	margin:0 auto;			/*   内外边距去除,字体大小为12px */
+	padding:0 auto;font-size:12px;
+}
+#header{			/*1*/
+	width:990px;
+	height:80px;
+}
+#logo{	/*  1左上  */
+	width:300px;
+	height:80px;
+	float:left;
+	background:#FFFFFF url("../images/王者荣耀logo.png") no-repeat left bottom;
+	
+}
+#select_search{			/*	 1右上	  */
+	width:690px;
+	height:80px;
+	font-size:20px
+	background:#FFFFFF;
+	float:left;
+}
+#nav{				/*		2    */
+	clear:both;
+	width:990px;
+	height:40px;
+	font-size:18px;
+	background-image:url("../images/导航背景.png")
+}
+#nav a:hover{
+	color:#Bf0000;
+	text-decoration:none;
+}
+#nav td{
+	width:165px;
+	height:40px;
+	text-align:center;
+	vertical-align:middle; 
+}
+table{
+	line-height:1.5em;
+}
+a:link,a:visited,a:active{
+	text-decoration:none;
+}
+a:link,a:visited,a:active{
+	color:#828282;
+}
+h2{
+	font-size:30px;
+	font-family:宋体;
+	font-style:bolder;
+	color:#ffff00;
+	margin:0
+}
+img{
+	width:200px;
+	height:230px;
+	transition:all 2s ease;
+}
+#table_title{
+	background-image:url("../images/手办标题栏.jpg");
+	width:990px;
+	height:200px
+}
+#one,#two{
+	background-image:url("../images/导航背景.png");
+	color:#00ffff;
+	font-size:20px;
+}
+img:hover{					
+	cursor:pointer;/*变手势光标*/
+}
+
+img:hover{		/*变大*/
+	width:300px;
+	height:300px;
+}
+#gouwu{
+}
+#shouban{
+	width:990px; height:800px; background-color:#3b3b3b
+}
+#shouban td{
+	text-align:center; vertical-align:middle;  border:3px groove gray  /*设置元素的垂直对齐方式。*/
+}
+.myBtn{
+	margin:20px; width:120px; height:45px; border:1px ridge #44FFEE;
+}
+#end{
+	background-image:url("../images/更多手办.png");
+	width:990px;
+	height:220px
+}
+#comment{
+	clear:both;
+	width:990px;
+	height:210px;
+	background-image:url("../images/留言底.jpg");
+	float:left
+}
+input{ 
+	vertical-align: middle;
+} /*垂直居中*/
+#footer{			/*5*/
+	clear:both;
+	width:990px;
+	height: 60px;
+	background: #330033;
+	text-align: center;
+	line-height: 10px;
+	float:left
+}
+#footer p{ 
+	color: #ffff00;
+	font-size: 15px;
+	opacity: 0.7; 
+}
+.p1{ 
+	margin: 0;
+	padding: 15px 0 5px 0;
+}
+.p2{ 
+	margin: 0;
+	padding: 5px 0;
+}
+#footer span{
+	color: #aaffff;
+}

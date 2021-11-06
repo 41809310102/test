@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>问卷调查</title>
+  <script src="js/survey.js" ></script>
+  <script src="js/choujian.js" ></script>
+  <script src="js/comment.js"></script>
+  <link rel="stylesheet" href="css/survey.css">
+ </head>
+ <body>
+  <!-- 大框 -->
+  <div id="container">
+	<!--  1 头部-->
+	<div id="header">
+		<div id="logo"></div>
+		<div id="select_search">
+			<table height="80px" align="right" >
+				<tr align="right">
+					<td colspan="4">
+						<select id="sel">
+							<option selected>简体中文</option>
+							<option >繁体中文</option>
+							<option >English</option>
+						</select>
+					</td>
+				</tr>
+				<tr align="right">
+					<td><font size="2">关键词:</font></td>
+					<td><input type="text" size="25"></td>
+					<td><input type="image" src="images/搜索.png"></td>
+				</tr>
+			</table>
+		</div>	
+	</div>
+	<!--2导航栏  -->
+	<div id="nav">
+		<table>
+			<td ><a href="index.html">首页</a></td>
+			<td ><a href="game_introduction.html">游戏介绍</a></td>
+			<td><a href="game_tips.html">游戏攻略</a></td>
+			<td ><a href="toy.html">手办商城</a></td>
+			<td ><a href="survey.html">问卷调查</a></td>
+			<td ><a href="join.html">加入我们</a></td>
+		</table>
+	</div>
+	<!-- 3标题 -->
+	<div id="biaoti">
+		<h2>问卷调查</h2>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+	</div>
+	<!-- 4 问卷 -->
+	<div id="wenjuan">
+		<form action="" method="">
+			<table   cellspacing="0" cellpadding="0"   width="990px"  height="830px"align="center"  >
+				<tr>
+					<td class="bt1">
+						王者荣耀发烧友调查问卷
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p id="p1">亲爱的玩家：大家好!</p>
+						<p id="p1">为了更好的了解玩家对近年来对王者荣耀的看法，特制定本问卷，希望得到您的配合，请认真阅读并回答以下问题，您的回答将直接影响本调查的可信度和有效性，真诚感谢您的支持，祝您天天愉快，谢谢!</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">1.您的性别：</td>
+								<td>
+									<label for="boy"><input id="boy" name="sex" type="radio"/>男</label>&nbsp;&nbsp;
+									<label for="girl"><input id="girl" name="sex" type="radio"/>女</label>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">2.您的服务区(Wechat/QQ)：</td>
+								<td>
+									<input type="text" id="a" value="" size="30" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">3.您的擅长英雄位置：</td>
+								<td>
+									<select name="grade">
+										<option value="1">富婆</option>
+										<option value="2">法师</option>
+										<option value="3">战士</option>
+										<option value="4">刺客</option>
+										<option value="5">坦克</option>
+										<option value="6">游走</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">
+									4.对王者荣耀的期望：
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="" id="q" value="" />送皮肤<br>
+									<input type="checkbox" name="" id="q1" value="" />送英雄<br>
+									<input type="checkbox" name="" id="q2" value="" />送王者水晶<br>
+									<input type="checkbox" name="" id="q3" value="" />送金币<br>
+									<input type="checkbox" name="" id="q4" value="" />送CP<br>
+									<input type="checkbox" name="" id="q5" value="" />送钻石<br>
+									<input type="checkbox" name="" id="q6" value="" />其他
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">
+									5.您对该游戏的建议：
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="" id="w" value="" />出多点优质皮肤<br>
+									<input type="checkbox" name="" id="w1" value="" />调试合理英雄机制<br>
+									<input type="checkbox" name="" id="w2" value="" />匹配机制实力化<br>
+									<input type="checkbox" name="" id="w3" value="" />加强狄大人的监管<br>
+									<input type="checkbox" name="" id="w4" value="" />其他
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">
+									6.您认为该游戏应该禁止小学生玩耍吗：
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" name="1" id="b" value="" />有必要
+									<input type="radio" name="1" id="b" value="" />没有必要
+									<input type="radio" name="1" id="b" value="" />无所谓
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">
+									7.您觉得要重做什么英雄：
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="radio" name="2" id="c" value="" />梦琪
+									<input type="radio" name="2" id="c" value="" />程咬金
+									<input type="radio" name="2" id="c" value="" />妲己
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="0" cellspacing="" cellpadding="">
+							<tr>
+								<td class="td1">
+									8.您对王者荣耀的建议：
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<textarea rows="5" cols="100" id="h">请您提出宝贵的建议:</textarea>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr height="50px">
+					<td align="center">
+						<input type="submit" id="" name="" value="提交答案" onclick="check5()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="reset" name="" id="" value="清空" />
+					</td>
+				</tr>
+				<tr>
+					<td height="40px" align="center" valign="middle">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 5标题 -->
+	<div id="biaoti">
+		<h2>抽奖环节</h2>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+	</div>
+	<!--6转盘  -->
+	<div class="box">
+		<div class="option"><img src="images/曹操奖品.png"></div>
+		<div class="option"><img src="images/皮肤碎片奖品.png"></div>
+		<div class="option"><img src="images/冰雪公主奖品.png"></div>
+		<div class="option"><img src="images/荣耀水晶.png"></div>
+		<div class="option five">点击抽奖</div>
+		<div class="option"><img src="images/玫瑰奖品.png"></div>
+		<div class="option"><img src="images/奖品吕布.png"></div>
+		<div class="option"><img src="images/铭文碎片奖品.png"></div>
+		<div class="option"><img src="images/英雄碎片奖品.png"></div>
+	</div>
+	<script>
+		// 获取元素
+		var options = document.getElementsByClassName("option");
+		var button = document.getElementsByClassName("five")[0];
+		// 所有奖项下标的值
+		var arr = [0,1,2,5,8,7,6,3];
+		// 数组的下标的初始值
+		var num = 0;
+		// 转动的次数
+		var count = 0;
+		button.addEventListener("click",function () {
+		// 获取的随机数   转动的次数
+		var time = Math.ceil(Math.random()*16+16);
+		// 定时器来抽奖
+		var timer = setInterval(function () {
+			// 遍历arr数组      目的：如果不设置这个循环，那么一次走过的奖项都会变色，变不回原来的颜色
+			for(var i=0;i<arr.length;i++){
+				options[arr[i]].style.backgroundColor = "green";
+			}
+			// 走到的奖项
+			options[arr[num]].style.backgroundColor = "red";
+			num++;
+			// 如果上面数组的下标值为8时，要重新赋值为0
+			if(num == 8){
+				num = 0;
+			}
+			// 走的div的个数
+			count++;
+			// 如果转动的次数与获取的随机数一致的情况下，清除定时器
+			if(count==time){
+				clearInterval(timer);
+				// 转动的次数清零
+				count = 0;
+			}
+		},100)
+		})
+	</script>
+	<!--7评论区  -->
+	<div id="comment">
+		<h2 >留言板</h2>
+		<hr size="2px" color="#b5b5b5" width="990px" align="left">
+		<form>
+			<table align="center">
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" id="n"/></td>
+					<td>Wechat：</td>
+					<td><input type="text" id="x"/></td>
+					<td>留言时间：</td>
+					<td><input type="text" id="t"/></td>
+				</tr>
+				<tr>
+					<td >留言内容：</td>
+					<td colspan="5"><textarea id="txt" cols="100" rows="3" placeholder="评论的时候，请遵纪守法并注意语言文明"></textarea></td>
+              
+				</tr>
+
+				<tr >
+					<td colspan="2"><input type="submit" value="提交留言" onclick="check()"></th>
+					<td colspan="2"><input type="reset" value="重置内容"></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!--脚部  -->
+	<div id="footer" >
+		<p class="p1">Copyright&nbsp;&copy;&nbsp;2021&nbsp;<span>Li&nbsp;帅哥</span>,All&nbsp;rights&nbsp;reserved.</p>
+		<p class="p2">2021,版权所有&nbsp;帅哥&nbsp;85CP备13385453</p>
+	</div>
+ </div>
+ </body>
+</html>

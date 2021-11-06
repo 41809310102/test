@@ -1,9 +1,13 @@
 package com.naughty.userlogin02.controllerwx;
 
 import com.alibaba.fastjson.JSON;
+import com.naughty.userlogin02.bean.Address;
 import com.naughty.userlogin02.bean.Restaurant;
 import com.naughty.userlogin02.bean.Restfood;
+import com.naughty.userlogin02.bean.User;
+import com.naughty.userlogin02.dao.AddressDao;
 import com.naughty.userlogin02.dao.RestfoodDao;
+import com.naughty.userlogin02.dao.UserDao;
 import com.naughty.userlogin02.service.RestService;
 import com.naughty.userlogin02.service.RestfoodService;
 import com.naughty.userlogin02.util.TimeUtils;
@@ -11,6 +15,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.sound.midi.Soundbank;
 import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
@@ -23,6 +28,10 @@ public class restcontroller {
    @Autowired
    private RestfoodService restfoodService;
 
+   @Autowired
+   private AddressDao addressDao;
+   @Autowired
+    private UserDao userDao;
    @CrossOrigin
    @PostMapping("/getrestaurant")
    public String getRest(){
@@ -65,4 +74,61 @@ public class restcontroller {
        return  JSON.toJSONString(restfood);
     }
 
+
+    @PostMapping("/getuseraddress")
+    public String getUseraddress(@RequestParam("user_id") int user_id){
+        System.out.println("正在获取地址");
+       int count = addressDao.getAddressCounts("%"+""+"%");
+       List<Address> res = addressDao.getAlladdress(user_id,0,count);
+       User user = userDao.getUserByMassages(user_id);
+       for(int i = 0;i<res.size();i++){
+           res.get(i).setUsername(user.getUsername());
+           res.get(i).setUserphone(user.getPhone());
+           res.get(i).setUsersex(user.getSex());
+       }
+       String address_JSON = JSON.toJSONString(res);
+        System.out.println(address_JSON);
+       return  address_JSON;
+    }
+
+    @RequestMapping("/getuseraddressok")
+    public  String getAddressok(int user_id){
+        return getUseraddress(user_id);
+    }
+
+
+    @RequestMapping("/addaddress")
+    public String addaddress(String name,String sex,String phone,String city,String cityDetail) {
+        System.out.println(city + cityDetail);
+        //根据当前name信息查找是否有该用户
+        int user_id = userDao.getUserid(name);
+
+        Address address = new Address();
+        address.setUsersex(sex);
+        address.setUser_id(user_id);
+        address.setIsmoren(false);
+        address.setAddress(city + cityDetail);
+        addressDao.addAddress(address);
+        return "ok";
+    }
+    @RequestMapping("/updateismoren")//修改默认地址
+    public  String updateIsmoren(Boolean ismoren,int id){
+       String res="error";
+
+       int cont = addressDao.updateIsmoren(ismoren,id);
+       int count = addressDao.updataOtherismoren(false,id);
+       if(cont>0){
+           res="ok";
+       }
+
+       return res;
+    }
+
+    @RequestMapping("/delectaddress")//删除地址
+    public  String delectAddress(int id){
+        String res="error";
+        addressDao.delectAddress(id);
+        res="ok";
+        return res;
+    }
 }
